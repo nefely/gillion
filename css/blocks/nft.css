@@ -1,0 +1,517 @@
+.nft {
+	padding: 50px 0 0 0;
+	position: relative;
+	z-index: 2;
+}
+.nft:after {
+	content: "";
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	background: rgb(255,241,0);
+	background: linear-gradient(90deg, rgba(255,241,0,0) 0%, rgba(255,241,0,1) 50%, rgba(255,241,0,0) 100%);
+}
+
+
+.nft__title {
+	margin-bottom: 40px;
+	text-align: center;
+}
+.nft__title h4 {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: var(--fw-bold);
+}
+.nft__title h6 {
+	font-weight: var(--fw-medium);
+}
+.nft__title h5 {
+	margin-top: 30px;
+	padding-top: 31px;
+	font-weight: var(--fw-semi-bold);
+	position: relative;
+}
+.nft__title h5:before {
+	content: "";
+	height: 1px;
+	width: 100%;
+	max-width: 500px;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgb(255,255,255);
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+}
+
+
+.nft__contract {
+	position: relative;
+}
+.nft__contract-row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-direction: row;
+}
+.nft__contract-row--reverse {
+	flex-direction: row-reverse;
+}
+.nft__contract-block {
+	background: var(--gray);
+	width: calc( (100% - 120px) / 4 );
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	margin-bottom: 40px;
+	font-size: calc(1rem - 2px);
+	border-radius: var(--b-rad);
+	position: relative;
+	z-index: 1;
+}
+.nft__contract-block-6 {
+	margin-left: auto;
+	margin-right: 40px;
+	width: calc( (100% - 120px) / 2 + 40px );
+}
+.nft__contract-block p {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 20px 15px;
+	position: relative;
+	z-index: 2;
+	background: var(--gray);
+	border-radius: var(--b-rad);
+}
+/*div - border / gradient*/
+/*p - arrow*/
+.nft__contract-block-1:after,
+.nft__contract-block-2:after,
+.nft__contract-block-3:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top:-2px;
+	right:-2px;
+	z-index: 1;
+	border-top-right-radius: var(--b-rad);
+	border-bottom-right-radius: var(--b-rad);
+	padding: 2px; 
+	background:linear-gradient(to right, transparent 0%, transparent 0%,  #FFE259 100%); 
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude; 
+}
+.nft__contract-block-2:before,
+.nft__contract-block-3:before,
+.nft__contract-block-4:before,
+.nft__contract-block-5:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top:-2px;
+	left:-2px;
+	z-index: 1;
+	border-top-left-radius: var(--b-rad);
+	border-bottom-left-radius: var(--b-rad);
+	padding: 2px; 
+	background:linear-gradient(to left, transparent 0%, transparent 0%,  #FFE259 100%); 
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude; 
+}
+.nft__contract-block-1 > p:after,
+.nft__contract-block-2 > p:after,
+.nft__contract-block-3 > p:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: calc(100% + 2px);
+	width: 36px;
+	height: 2px;
+	background: linear-gradient(90deg, #FFE259, rgba(255, 241, 0, 0) 100%);
+}
+.nft__contract-block-4 > p:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: calc(100% + 2px);
+	width: 36px;
+	height: 2px;
+	background: linear-gradient(270deg, #FFE259, rgba(255, 241, 0, 0) 100%);
+}
+.nft__contract-block-5 > p:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: calc(100% + 2px);
+	width: 36px;
+	height: 2px;
+	background: linear-gradient(270deg, #FFE259, rgba(255, 241, 0, 0) 100%);
+}
+.nft__contract-block-5 > p:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: calc(100% + 2px);
+	width: 36px;
+	height: 2px;
+	background: linear-gradient(270deg, #FFE259, rgba(255, 241, 0, 0) 100%);
+}
+.nft__contract-block-6:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:-2px;
+	right:-2px;
+	z-index: 1;
+	border-radius: var(--b-rad);
+	padding: 2px; 
+	background:linear-gradient(to right, #FFE259 0%, #FFE259 100%); 
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude; 
+}
+
+/*background gradient*/
+.nft__contract-block-6 p:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-top-left-radius: var(--b-rad);
+	border-bottom-left-radius: var(--b-rad);
+	width: 50%;
+	height: 100%;
+	z-index: -1;
+	background: linear-gradient(90deg, rgba(255, 241, 0, 0.1) 0%, rgba(255, 241, 0, 0) 100%);
+}
+
+
+.nft__contract_line_from_row {
+	position: absolute;
+	height: 100%;
+	width: 2px;
+	background: #FFE259;
+	right: -38px;
+	top: 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+	.nft__contract-row {
+		flex-wrap: wrap;
+	}
+	.nft__contract-row--reverse {
+		flex-direction: row;
+	}
+	.nft__contract-block {
+		width: calc( (100% - 40px) / 2 );
+	}
+	.nft__contract-block-6 {
+		margin-right: auto;
+		margin-left: 40px;
+		width: calc( (100% - 40px) / 2 );
+	}
+	.nft__contract-block-4 {
+		order: 1;
+	}
+	.nft__contract-block-3 {
+		order: 2;
+	}
+	.nft__contract-block-2:before,
+	.nft__contract-block-3:before,
+	.nft__contract-block-4:before,
+	.nft__contract-block-5:before {
+		display: none;
+	}
+	.nft__contract-block-2:after,
+	.nft__contract-block-3:after,
+	.nft__contract-block-4:after,
+	.nft__contract-block-5:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top:-2px;
+		right:-2px;
+		z-index: 1;
+		border-radius: var(--b-rad);
+		padding: 2px; 
+		background:linear-gradient(to right, #FFE259 0%, #FFE259 100%); 
+		-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude; 
+	}
+	.nft__contract-block-6:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		top:-2px;
+		left:-2px;
+		z-index: 1;
+		border-top-left-radius: var(--b-rad);
+		border-bottom-left-radius: var(--b-rad);
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		padding: 2px; 
+		background:linear-gradient(to left, transparent 0%, transparent 0%,  #FFE259 100%); 
+		-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude; 
+	}
+	.nft__contract-block-1 > p:after,
+	.nft__contract-block-5 > p:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: calc(100% + 2px);
+		width: 36px;
+		height: 2px;
+		background: linear-gradient(90deg, #FFE259, #FFE259 100%);
+	}
+	.nft__contract-block-3 > p:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: calc(0% - 2px);
+		transform: translateX(-100%);
+		width: 36px;
+		height: 2px;
+		background: linear-gradient(90deg, #FFE259, #FFE259 100%);
+	}
+
+	.nft__contract-block-2 > p:after , 
+	.nft__contract-block-4 > p:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: calc(100% + 2px);
+		left: 50%;
+		transform: translateX(-50%);
+		width: 2px;
+		height: 36px;
+		background: linear-gradient(180deg, #FFE259, #FFE259 100%);
+	}
+
+	.nft__contract-block p {
+		padding: 15px 0px 15px 10px;
+	}
+
+
+	.nft__contract_line_from_row {
+		display: none;
+	}
+}
+@media screen and (max-width: 767px) {
+	.nft__title h6 {
+		font-size: 1rem;
+	}
+	.nft__title h5 {
+		font-size: calc(1rem + 2px);
+	}
+	.nft__title h5:before {
+		max-width: 200px;
+	}
+
+
+	.nft__contract-block {
+		margin-bottom: 30px;
+		width: calc( (100% - 30px) / 2 );
+	}
+	.nft__contract-block-6 {
+		margin-left: 30px;
+		width: calc( (100% - 30px) / 2 );
+	}
+	.nft__contract-block-2:after,
+	.nft__contract-block-3:after,
+	.nft__contract-block-4:after,
+	.nft__contract-block-5:after {
+		top:-2px;
+		right:-2px;
+		padding: 2px; 
+	}
+	.nft__contract-block-1:after {
+		top:-2px;
+		right:-2px;
+		padding: 2px; 
+	}
+	.nft__contract-block-6:after {
+		top:-2px;
+		left:-2px;
+		padding: 2px; 
+	}
+	.nft__contract-block-1 > p:after,
+	.nft__contract-block-5 > p:after{
+		width: 26px;
+		left: calc(100% + 2px);
+		height: 2px;
+	}
+	.nft__contract-block-3 > p:after {
+		width: 26px;
+		left: calc(0% - 2px);
+		height: 2px;
+	}
+	.nft__contract-block-2 > p:after , 
+	.nft__contract-block-4 > p:after {
+		height: 26px;
+		width: 2px;
+		top: calc(100% + 2px);
+	}
+	.nft__contract-block p {
+		padding: 10px 10px;
+	}
+}
+/*@media screen and (max-width: 767px) {
+	.nft {
+		padding: 50px 0 30px 0;
+	}
+
+
+	.nft__contract-block {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.nft__contract-block-6 {
+		width: 100%;
+		margin-left: 0;
+	}
+	.nft__contract-block-1:after {
+		width: 100%;
+		height: 100%;
+		top: -3px;
+		right:-3px;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+		border-bottom-right-radius: calc(var(--b-rad) + 4px);
+		border-bottom-left-radius: calc(var(--b-rad) + 4px);
+		background:linear-gradient(to bottom, transparent 0%, transparent 25%,  #FFE259 100%); 
+	}
+	.nft__contract-block-6:after {
+		width: 100%;
+		height: 100%;
+		top: -3px;
+		right:-3px;
+		border-top-right-radius: calc(var(--b-rad) + 4px);
+		border-top-left-radius: calc(var(--b-rad) + 4px);
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		background:linear-gradient(to top, transparent 0%, transparent 25%,  #FFE259 100%); 
+	}
+	.nft__contract-block-6:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-top-left-radius: calc(1px + var(--b-rad));
+		border-bottom-left-radius: calc(1px + var(--b-rad));
+		width: 100%;
+		height: 70%;
+		background: linear-gradient(180deg, rgba(255, 241, 0, 0.1) 0%, rgba(255, 241, 0, 0) 100%);
+	}
+	.nft__contract-block-1 > p:after,
+	.nft__contract-block-2 > p:after, 
+	.nft__contract-block-3 > p:after, 
+	.nft__contract-block-4 > p:after, 
+	.nft__contract-block-5 > p:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: calc(100% + 3px);
+		left: 50%;
+		transform: translateX(-50%);
+		width: 3px;
+		height: 14px;
+		background: linear-gradient(180deg, #FFE259, #FFE259 100%);
+	}
+	.nft__contract-block p {
+		text-align: center;
+		justify-content: center;
+		padding: 20px 20px;
+	}
+}*/
+
+
+.nft__gallery {
+/*	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;*/
+	margin-top: -40px;
+	margin-bottom: -60px;
+
+}
+.nft__gallery-block {
+	width: calc(100vw / 6);
+	max-width: calc(100vw / 6);
+	height: calc(100vw / 6 * 1.333);
+	max-height: calc(100vw / 6 * 1.333);
+	margin: 60px 0;
+}
+.nft__gallery-block > img,
+.nft__gallery-block > video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	-webkit-filter: drop-shadow(0px 0px 0px rgba(255, 226, 89, 0));
+	-o-filter: drop-shadow(0px 0px 0px rgba(255, 226, 89, 0));
+	filter: drop-shadow(0px 0px 0px rgba(255, 226, 89, 0));
+	-webkit-transform: scale(1,1);
+	-o-transform: scale(1,1);
+	transform: scale(1,1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    position: relative;
+	background: transparent;
+}
+.nft__gallery-block:hover > img,
+.nft__gallery-block:hover > video {
+	-webkit-transform: scale(1.1,1.1);
+	-o-transform: scale(1.1,1.1);
+	transform: scale(1.1,1.1);
+    z-index: 2;
+}
+@media screen and (max-width: 767px) {
+	.nft__gallery {
+		margin-top: -30px;
+	}
+	.nft__gallery-block {
+		width: calc(100vw / 3);
+		max-width: calc(100vw / 3);
+		height: calc(100vw / 3 * 1.333);
+		max-height: calc(100vw / 3 * 1.333);
+	}
+	/*.nft__gallery-block:hover > img,
+	.nft__gallery-block:hover > video {
+		-webkit-filter: drop-shadow(0px 4px 20px rgba(255, 226, 89, 0.15));
+		-o-filter: drop-shadow(0px 4px 20px rgba(255, 226, 89, 0.15));
+		filter: drop-shadow(0px 4px 20px rgba(255, 226, 89, 0.15));
+	}*/
+}

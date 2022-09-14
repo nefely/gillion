@@ -1,0 +1,13 @@
+.list > *:not(:first-child) {
+	margin-top: 25px;
+}
+@media screen and (max-width: 1400px) {
+	.list > *:not(:first-child) {
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.list > *:not(:first-child) {
+		margin-top: 10px;
+	}
+}

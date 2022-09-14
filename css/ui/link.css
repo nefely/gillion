@@ -1,0 +1,73 @@
+.discord-link {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	align-content: center;
+	text-transform: uppercase;
+	font-weight: var(--fw-semi-bold);
+}
+.discord-link > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	position: relative;
+	padding: 0 12px;
+}
+.discord-link > div > p {
+	padding-right: 10px;
+	line-height: 1em;
+}
+.discord-link > svg {
+	height: 100%;
+	width: auto;
+	display: flex;
+	align-items: stretch;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+
+.discord-link-blue > div {
+	background: var(--blue);
+	color: var(--white);
+} 
+.discord-link-blue > div > svg > path {
+	fill: var(--white);
+}
+.discord-link-blue > svg {
+	fill: var(--dark-blue);
+}
+.discord-link-blue:hover > svg {
+	fill: var(--blue);
+} 
+
+
+.discord-link-yellow > div {
+	background: var(--yellow);
+	color: var(--black);
+} 
+.discord-link-yellow > div > svg > path {
+	fill: var(--black);
+}
+.discord-link-yellow > svg {
+	fill: var(--dark-yellow);
+}
+.discord-link-yellow:hover > svg {
+	fill: var(--yellow);
+} 
+
+
+.discord-link-small {
+	height: 51px;
+}
+.discord-link-small > svg {
+	min-width: 13px;
+}
+.discord-link-big {
+	height: 64px;
+}
+.discord-link-big > svg {
+	min-width: 16px;
+}

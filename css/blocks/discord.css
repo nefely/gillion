@@ -1,0 +1,129 @@
+#about {
+	background-image: url("../../media/about_bg.png");
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+.discord {
+	position: relative;
+	padding: 100px 0 50px 0;
+}
+
+
+.discord__block {
+	background: var(--gray);
+	border-radius: var(--b-rad);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+}
+.discord__block:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	top:-3px;
+	right:-3px;
+	z-index: -1;
+	border-radius: calc(var(--b-rad) + 4px);
+	padding: 3px; 
+	background:linear-gradient(to right top, transparent 0%, transparent 66%,  #FFE259 100%); 
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude; 
+}
+
+.discord__block:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-top-left-radius: calc(1px + var(--b-rad));
+	border-bottom-left-radius: calc(1px + var(--b-rad));
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(90deg, rgba(255, 241, 0, 0.1) 0%, rgba(255, 241, 0, 0) 100%);
+}
+.discord__block > * {
+	position: relative;
+	z-index: 1;
+}
+
+
+.discord__block-text {
+	padding: 55px 10px 55px 45px;
+	width: 60%;
+}
+.discord__block-text > h4 {
+	text-transform: uppercase;
+	font-weight: var(--fw-bold);
+}
+.discord__block-text > p {
+	padding: 25px 0 30px 0;
+	text-transform: uppercase;
+}
+.discord__block-text > a {
+	justify-content: flex-start;
+}
+
+
+.discord__block-gif {
+	width: 35%;
+	padding: 10px 29px 10px 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.discord__block-gif img {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+	border: 0px;
+}
+
+/* md */
+@media screen and (max-width: 1024px) {
+	.discord__block-gif {
+		width: 40%;
+	}
+}
+/* sm */
+@media screen and (max-width: 767px) {
+	#about {
+		background-image: url("../../media/about_bg-mob.png");
+	}
+
+
+	.discord__block:before {
+		display: none;
+	}
+
+
+	.discord__block-text {
+		padding: 0px 20px 20px 20px;
+		width: 100%;
+		order: 2;
+	}
+	.discord__block-text > h4 {
+		text-align: center;
+	}
+	.discord__block-text > p {
+		padding: 15px 0 20px 0;
+		font-size: calc(1rem - 2px);
+	}
+	.discord__block-text > a {
+		justify-content: center;
+	}
+	.discord__block-gif {
+		order: 1;
+		width: 100%;
+		max-width: 150px;
+		padding: 20px 0 10px 0;
+		margin: 0 auto;
+	}
+}

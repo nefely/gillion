@@ -1,0 +1,122 @@
+footer {
+	padding: 50px 0 50px 0;
+	background: var(--gray);
+	position: relative;
+}
+footer:after {
+	content: "";
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	background: rgb(255,241,0);
+	background: linear-gradient(90deg, rgba(255,241,0,0) 0%, rgba(255,241,0,1) 50%, rgba(255,241,0,0) 100%);
+}
+
+
+.footer__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+.footer__column {
+	width: calc( (100% - 60px) / 3 );
+}
+.footer__column > h5 {
+	width: 100%;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: var(--fw-semi-bold);
+}
+
+.footer__column-menu > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.footer__column-menu > div > ul {
+	width: calc( (100% -20px) / 2 );
+}
+
+.footer__column ul > li:not(:last-child) {
+	margin-bottom: 10px;
+}
+.footer__column li a {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.footer__column li a > div {
+	margin-right: 10px;
+	width: 1rem;
+	height: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer__column--logo img {
+	margin: 0 auto;
+}
+
+
+.footer__rules {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: calc(1rem - 2px)
+}
+.footer__rules > p {
+	padding: 0 20px;
+}
+.footer__rules a {
+	font: inherit;
+}
+
+
+@media screen and (max-width: 767px) {
+	.footer__row {
+		width: 320px;
+		margin: 0 auto;
+	}
+
+	.footer__row > .footer__column:not(:first-child)  {
+		background: var(--dark-gray);
+		padding: 20px;
+		border-radius: var(--b-rad);
+	}
+	.footer__column {
+		width: 100%;
+	}
+	.footer__column > h5 {
+		margin-bottom: 15px;
+	}
+	.footer__row > .footer__column:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	.footer__column--logo img {
+		max-width: 200px;
+	}
+
+	.footer__rules {
+		text-align: center;
+	}
+	.footer__rules > p {
+		width: 100%;
+		padding: 0;
+	}
+	.footer__rules > p:nth-child(1) {
+		order: 2;
+		margin-top: 10px;
+		font-size: 10px;
+	}
+	.footer__rules > p:nth-child(2) {
+		order: 1;
+	}
+
+}

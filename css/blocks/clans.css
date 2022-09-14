@@ -1,0 +1,365 @@
+.clans {
+	padding: 50px 0 0 0;
+}
+
+
+.clans__title {
+	margin-bottom: 40px;
+	text-align: center;
+}
+.clans__title h4 {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: var(--fw-bold);
+}
+.clans__title h6 {
+	font-weight: var(--fw-medium);
+}
+
+
+.clans__blocks {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+.clans__block {
+	width: calc(100vw / 3);
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	position: relative;
+	overflow: hidden;
+	background: rgba(235, 235, 235, 0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.clans__block:hover {
+	background: rgba(235, 235, 235, 0);
+}
+
+
+.clans__block-card {
+	position: relative;
+	width: calc(100vw / 3);
+	overflow: hidden;
+	cursor: pointer;
+}
+.clans__block-card:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+.clans__card-wrapper {
+	width: calc(100vw / 3);
+	/*min-width: calc(100vw / 3);*/
+	height: 100%;
+}
+.clans__card-wrapper > picture > img {
+	width: 100%;
+	height: 100%;
+	max-height: 634px;
+	object-fit: cover;
+	object-position: center top;
+	/*opacity: 0.2;*/
+}
+.clans__icon {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	z-index: 3;
+	transform: translate3d(0,0,0);
+	text-align: center;
+	opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.clans__block--active .clans__icon {
+	opacity: 0;
+}
+.clans__icon > h4 {
+	font-weight: var(--fw-bold);
+	-webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.clans__icon > img {
+	width: 100px;
+	margin: 0 100% 0 0;
+	transform: translateX(0%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.clans__arrow {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    line-height: 1em;
+}
+.clans__block--active .clans__arrow {
+	opacity: 0;
+}
+.clans__arrow p {
+	font-weight: 300;
+	line-height: 1em;
+}
+
+
+.clans__block-info {
+	width: 0;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.clans__info-wrapper {
+	width: calc( (100vw / 3) * 2 );
+	/*min-width: calc( (100vw / 3) * 2 );*/
+	height: 100%;
+	padding: 20px 65px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    position: relative;
+}
+.clans__info-wrapper:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-size: contain;
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+.clans__block--magdar .clans__info-wrapper {
+	background-image: url("../../media/clans__location--magdar-bg.png");
+}
+.clans__block--magdar .clans__info-wrapper:after {
+	background-image: url("../../media/clans__location--magdar.png");
+}
+.clans__block--aritas .clans__info-wrapper {
+	background-image: url("../../media/clans__location--aritas-bg.png");
+}
+.clans__block--aritas .clans__info-wrapper:after {
+	background-image: url("../../media/clans__location--aritas.png");
+}
+.clans__block--renegades .clans__info-wrapper {
+	background-image: url("../../media/clans__location--renegades-bg.png");
+}
+.clans__block--renegades .clans__info-wrapper:after {
+	background-image: url("../../media/clans__location--renegades.png");
+}
+.clans__info-wrapper > * {
+	max-width: 700px;
+	position: relative;
+	z-index: 2;
+}
+.clans__info-wrapper > h4 {
+	font-weight: var(--fw-bold);
+}
+.clans__info-wrapper > .clans__emblem {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.clans__info-wrapper > .clans__emblem > img {
+	height: 32px;
+	width: auto;
+	margin-left: 10px;
+}
+.clans__block-back {
+	padding: 0;
+	margin: 0;
+	color: var(--yellow);
+}
+
+
+/*animation*/
+.clans__block--active {
+	background: rgba(235, 235, 235, 0);
+	width: 100vw;
+}
+
+
+.clans__block--active .clans__block-card {
+	width: calc( 100vw / 3 );
+}
+/*.clans__block--active .clans__icon {
+	bottom: 50%;
+	left: 50%;
+	transform: translate3d(-50%,50%,0);
+}
+.clans__block--active .clans__icon > h4 {
+	font-size: 48px;
+}
+.clans__block--active .clans__icon > img {
+	width: 150px;
+	margin: 0 50%;
+	transform: translateX(-50%);
+}*/
+
+
+.clans__block--active .clans__block-info {
+	width: calc( (100vw / 3) * 2);
+}
+
+@media screen and (max-width: 1200px) {
+
+	.clans__icon > img {
+	    width: 100px;
+	}
+	/*.clans__block--active .clans__icon > img {
+		width: 100px;
+	}*/
+	.clans__icon > h4 {
+		font-size: 32px;
+	}
+	/*.clans__block--active .clans__icon > h4 {
+		font-size: 32px;
+	}*/
+
+	.clans__info-wrapper {
+		padding: 20px 30px;
+	}
+}
+@media screen and (max-width: 1023px) {
+	.clans__blocks {
+		width: 480px;
+		margin: 0 auto;
+		flex-wrap: wrap;
+	}
+	.clans__block {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+
+	.clans__block-card {
+		width: 100%;
+	}
+	.clans__block--active .clans__block-card {
+		width: 100%;
+	}
+	.clans__card-wrapper {
+		width: 100%;
+	}
+	.clans__card-wrapper > picture > img {
+		max-height: 380px;
+		/*width: calc(100% + 1px);
+		max-width: calc(100% + 1px);*/
+	}
+	.clans__icon > h4 {
+		font-size: 26px;
+		margin-left: 5px;
+	}
+	/*.clans__block--active .clans__icon > h4 {
+		font-size: 26px;
+		margin-left: 5px;
+	}*/
+	.clans__icon {
+		/*width: 100%;*/
+		left: 10px;
+		bottom: 10px;
+		transform: translate3d(0,0,0);
+	}
+	/*.clans__block--active .clans__icon {
+		bottom: 10px;
+		left: 50%;
+		transform: translate3d(-50%,0,0);
+	}*/
+	.clans__icon > img {
+	    width: 60px;
+	    margin: 0 0 0 0;
+		transform: translateX(0%);
+	}
+	/*.clans__block--active .clans__icon > img {
+		width: 60px;
+		margin: 0 0 0 0;
+		transform: translateX(0%);
+	}*/
+	.clans__arrow {
+		right: 10px;
+		bottom: 10px;
+	}
+
+
+	.clans__block-info {
+		width: 100%;
+		max-height: 0;
+	}
+	.clans__block--active .clans__block-info {
+		width: 100%;
+		max-height: 200vw;
+	}
+	.clans__info-wrapper {
+		width: 100%;
+	}
+	.clans__info-wrapper:after {
+		background-position: right top;
+	}
+	.clans__block--magdar .clans__info-wrapper {
+		background-image: url("../../media/clans__location--magdar-bg-mob.png");
+	}
+	.clans__block--magdar .clans__info-wrapper:after {
+		background-image: url("../../media/clans__location--magdar-mob.png");
+	}
+	.clans__block--aritas .clans__info-wrapper {
+		background-image: url("../../media/clans__location--aritas-bg-mob.png");
+	}
+	.clans__block--aritas .clans__info-wrapper:after {
+		background-image: url("../../media/clans__location--aritas-mob.png");
+	}
+	.clans__block--renegades .clans__info-wrapper {
+		background-image: url("../../media/clans__location--renegades-bg-mob.png");
+	}
+	.clans__block--renegades .clans__info-wrapper:after {
+		background-image: url("../../media/clans__location--renegades-mob.png");
+	}
+
+}
+@media screen and (max-width: 767px) {
+	.clans__title h6 {
+		font-size: 1rem;
+	}
+
+	.clans__blocks {
+		width: 320px;
+	}
+	
+
+	.clans__card-wrapper > picture > img {
+		max-height: 240px;
+	}
+
+	
+	.clans__info-wrapper > h4 {
+		font-size: calc(1rem + 4px);
+	}
+	.clans__info-wrapper > h6 {
+		font-size: calc(1rem - 2px);
+	}
+}

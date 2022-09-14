@@ -1,0 +1,210 @@
+.contact {
+	/*padding: 50px 0 50px 0;*/
+	margin-bottom: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 1;
+}
+
+
+.contact__discord {
+	width: 60%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: stretch;
+	padding: 50px;
+	position: relative;
+	background: var(--gray);
+}
+.contact__discord:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 30vw;
+	height: 100%;
+	top:-2px;
+	right: -1px;
+	z-index: 1;
+	padding: 2px; 
+	background:linear-gradient(to right, transparent 0%, transparent 0%,  #FFE259 100%); 
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude; 
+}
+
+.contact__discord-content {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	position: relative;
+	z-index: 2;
+}
+.contact__discord-content:before {
+	content: "";
+	display: block;
+	position: absolute;
+	right: calc(100% + 20px);
+	bottom: -50px;
+	width: calc(100% + 150px);
+	height: calc(100% + 220px);
+	background-image: url("../../media/contact__discord-img.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	z-index: 1;
+}
+.contact__discord-content > *,
+.contact__form-content > * {
+	position: relative;
+	z-index: 2;
+}
+.contact__discord-content > h4,
+.contact__form-content > h4 {
+	margin-bottom: 10px;
+	font-weight: var(--fw-bold);
+}
+.contact__discord-content > p,
+.contact__form-content > p {
+	margin-bottom: 20px;
+	max-width: 300px;
+}
+
+
+.contact__form {
+	width: 40%;
+	padding: 50px;
+	position: relative;
+	background: var(--gray);
+}
+.contact__form:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 30vw;
+	height: 100%;
+	top:-2px;
+	left:-1px;
+	z-index: 1;
+	padding: 2px; 
+	background:linear-gradient(to left, transparent 0%, transparent 0%,  #FFE259 100%); 
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude; 
+}
+.contact__form-content {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	position: relative;
+	z-index: 2;
+}
+
+
+@media screen and (max-width: 1024px) {
+	.contact__discord {
+		width: 50%;
+	}
+	.contact__discord-content:before {
+		display: none;
+	}
+
+
+	.contact__form {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.contact {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.contact__discord {
+		margin: 0 auto 40px auto;
+		padding: 30px;
+	}
+	.contact__discord:after,
+	.contact__form:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		bottom:-2px;
+		right:-2px;
+		z-index: -1;
+		border-radius: var(--b-rad);
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		padding: 2px; 
+		background:linear-gradient(to right, transparent 0%, transparent 0%,  #FFE259 100%); 
+		-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude; 
+	}
+	.contact__discord:before,
+	.contact__form:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		bottom:-2px;
+		left:-2px;
+		z-index: -1;
+		border-radius: var(--b-rad);
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		padding: 2px; 
+		background:linear-gradient(to left, transparent 0%, transparent 0%,  #FFE259 100%); 
+		-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude; 
+	}
+
+
+	.contact__form {
+		margin: 0 auto;
+		padding: 30px;
+	}
+	.contact__form-content {
+		display: inline-flex;
+	}
+
+
+	.contact__discord ,
+	.contact__form {
+		width: calc(100% - 20px);
+		justify-content: center;
+		text-align: center;
+		border-radius: var(--b-rad);
+	}
+	.contact__discord-content > p, 
+	.contact__form-content > p {
+		width: 100%;
+	}
+	.contact__discord-content > h4, 
+	.contact__form-content > h4 {
+		width: 100%;
+	}
+	.contact__discord-content > a {
+		margin: 0 auto;
+	}
+}
+
+/* sm */
+@media screen and (min-width: 560px) and (max-width: 767px){
+    .contact{
+        max-width: 540px;
+    }
+}
+/* xs */
+@media screen and (max-width: 559px){
+    .contact{
+        max-width: 100%;
+    }
+}
